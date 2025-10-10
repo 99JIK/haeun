@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+.icon {
+  font-size: 2.1rem;
+  background: #f3f2ef;
+  border-radius: 8px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+.dropdown {
+  margin-left: 18px;
+  background: #fff;
+  border: 1px solid #e3e3e3;
+  border-radius: 6px;
+  font-size: 1rem;
+  padding: 7px 18px 7px 10px;
+  color: #37352f;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: border 0.2s;
+}
+.dropdown:focus {
+  border: 1.5px solid #2563eb;
+}
+
+[data-theme='dark'] .icon {
+  background: #232324;
+}
+[data-theme='dark'] .title {
+  color: #fff;
+}
+[data-theme='dark'] .dropdown {
+  background: #232324;
+  color: #fff;
+  border: 1px solid #444;
+} 

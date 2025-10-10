@@ -1,0 +1,14 @@
+.database {
+  width: 100%;
+  margin-bottom: 32px;
+}
+.header {
+  margin-bottom: 0;
+}
+.viewArea {
+  margin-top: 8px;
+}
+
+[data-theme='dark'] .database {
+  background: transparent;
+} 

@@ -1,0 +1,81 @@
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 24px;
+  margin: 32px 0;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(15, 15, 15, 0.06);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+.card:hover {
+  box-shadow: 0 4px 16px rgba(55, 53, 47, 0.12);
+}
+
+.image {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  background: #f3f2ef;
+}
+
+.content {
+  padding: 16px 18px 14px 18px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.08rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #37352f;
+}
+
+.description {
+  font-size: 0.98rem;
+  color: #787774;
+  flex: 1;
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.2rem;
+  color: #bdbdbd;
+  background: #f3f2ef;
+  height: 140px;
+}
+[data-theme='dark'] .placeholder {
+  background: #232324;
+  color: #444;
+}
+
+[data-theme='dark'] .gallery {
+  background: #191919;
+}
+[data-theme='dark'] .card {
+  background: #232324;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.32);
+}
+[data-theme='dark'] .card:hover {
+  box-shadow: 0 4px 16px rgba(0,0,0,0.48);
+}
+[data-theme='dark'] .title {
+  color: #fff;
+}
+[data-theme='dark'] .description {
+  color: #bdbdbd;
+}
+[data-theme='dark'] .image {
+  background: #232324;
+} 

@@ -6,25 +6,87 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #2563eb;
+  --ifm-color-primary-dark: #1d4fd7;
+  --ifm-color-primary-darker: #1e40af;
+  --ifm-color-primary-darkest: #1e3a8a;
+  --ifm-color-primary-light: #3b82f6;
+  --ifm-color-primary-lighter: #60a5fa;
+  --ifm-color-primary-lightest: #93c5fd;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
+  --ifm-color-primary: #60a5fa;
+  --ifm-color-primary-dark: #3b82f6;
+  --ifm-color-primary-darker: #2563eb;
+  --ifm-color-primary-darkest: #1e40af;
+  --ifm-color-primary-light: #93c5fd;
+  --ifm-color-primary-lighter: #bfdbfe;
+  --ifm-color-primary-lightest: #dbeafe;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Notion 스타일 추가 */
+
+body {
+  background: #f7f6f3;
+  font-family: 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', Arial, sans-serif;
+  color: #37352f;
+}
+
+.notion-container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 32px 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(15, 15, 15, 0.06);
+}
+
+.notion-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  letter-spacing: -0.01em;
+}
+
+.notion-card {
+  background: #faf9f6;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(55, 53, 47, 0.04);
+  padding: 20px 24px;
+  margin-bottom: 20px;
+}
+
+.notion-toggle {
+  background: #f3f2ef;
+  border-radius: 6px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.notion-toggle:hover {
+  background: #ecebe9;
+}
+
+.notion-checkbox {
+  accent-color: #2e8555;
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.notion-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.notion-list-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
 }

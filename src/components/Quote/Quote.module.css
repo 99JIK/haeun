@@ -1,0 +1,25 @@
+.quote {
+  border-left: 4px solid #bdbdbd;
+  background: #f8f7f5;
+  margin: 18px 0;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-style: italic;
+  color: #555;
+}
+
+.author {
+  font-weight: 500;
+  font-size: 0.98rem;
+  margin-top: 8px;
+  color: #888;
+}
+
+[data-theme='dark'] .quote {
+  background: #232324;
+  color: #bdbdbd;
+  border-left: 4px solid #444;
+}
+[data-theme='dark'] .author {
+  color: #888;
+} 
