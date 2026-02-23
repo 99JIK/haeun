@@ -1,19 +1,114 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+dev:
+  label: Dev
+  permalink: /dev
+  description: 개발 관련 글
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+cs:
+  label: CS
+  permalink: /cs
+  description: 컴퓨터 과학 관련 글
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+web:
+  label: Web
+  permalink: /web
+  description: 웹 개발 관련 글
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+til:
+  label: TIL
+  permalink: /til
+  description: Today I Learned
+
+algorithm:
+  label: Algorithm
+  permalink: /algorithm
+  description: 알고리즘 및 자료구조
+
+review:
+  label: Review
+  permalink: /review
+  description: 회고 및 후기
+
+typescript:
+  label: TypeScript
+  permalink: /typescript
+  description: TypeScript 관련 글
+
+javascript:
+  label: JavaScript
+  permalink: /javascript
+  description: JavaScript 관련 글
+
+python:
+  label: Python
+  permalink: /python
+  description: Python 관련 글
+
+java:
+  label: Java
+  permalink: /java
+  description: Java 관련 글
+
+cpp:
+  label: C/C++
+  permalink: /cpp
+  description: C/C++ 관련 글
+
+react:
+  label: React
+  permalink: /react
+  description: React 관련 글
+
+nextjs:
+  label: Next.js
+  permalink: /nextjs
+  description: Next.js 관련 글
+
+css:
+  label: CSS
+  permalink: /css
+  description: CSS/Tailwind 관련 글
+
+html:
+  label: HTML
+  permalink: /html
+  description: HTML 관련 글
+
+git:
+  label: Git
+  permalink: /git
+  description: Git/GitHub 관련 글
+
+docker:
+  label: Docker
+  permalink: /docker
+  description: Docker 관련 글
+
+linux:
+  label: Linux
+  permalink: /linux
+  description: Linux 관련 글
+
+database:
+  label: Database
+  permalink: /database
+  description: 데이터베이스 관련 글
+
+web-security:
+  label: Web Security
+  permalink: /web-security
+  description: 웹 보안 관련 글
+
+reversing:
+  label: Reversing
+  permalink: /reversing
+  description: 리버스 엔지니어링 관련 글
+
+network:
+  label: Network
+  permalink: /network
+  description: 네트워크/네트워크 보안 관련 글
+
+ctf:
+  label: CTF
+  permalink: /ctf
+  description: CTF 대회 풀이 및 후기

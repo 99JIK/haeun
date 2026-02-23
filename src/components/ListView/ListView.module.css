@@ -1,71 +1,66 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin: 32px 0;
+  margin: 16px 0;
+  background: var(--notion-card-bg);
+  border-radius: 12px;
+  box-shadow: var(--notion-card-shadow);
+  overflow: hidden;
+  transition: background 0.3s ease;
 }
+
 .item {
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(55,53,47,0.04);
-  padding: 16px 20px;
+  padding: 12px 20px;
   display: flex;
-  flex-direction: column;
-  cursor: pointer;
-  transition: all 0.2s ease;
-  border: 1px solid transparent;
-}
-.item:hover {
-  box-shadow: 0 4px 16px rgba(55,53,47,0.12);
-  border-color: #e1e1e1;
-  transform: translateY(-1px);
-}
-.title {
-  font-size: 1.05rem;
-  font-weight: 600;
-  color: #37352f;
-  margin-bottom: 0;
-}
-.desc {
-  color: #787774;
-  font-size: 0.95rem;
-  margin-bottom: 6px;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: all 0.3s ease;
-}
-.meta {
-  font-size: 0.9rem;
-  color: #888;
-  display: flex;
+  align-items: center;
   gap: 16px;
-  opacity: 0;
-  max-height: 0;
+  cursor: pointer;
+  transition: background 0.15s ease;
+  border-bottom: 1px solid var(--notion-border);
+}
+
+.item:last-child {
+  border-bottom: none;
+}
+
+.item:hover {
+  background: var(--notion-bg-tertiary);
+}
+
+.icon {
+  font-size: 1.1rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.titleArea {
+  flex: 1;
+  min-width: 0;
+}
+
+.title {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--notion-text);
+  white-space: nowrap;
   overflow: hidden;
-  transition: all 0.3s ease;
+  text-overflow: ellipsis;
 }
-.item:hover .desc,
-.item:hover .meta {
-  opacity: 1;
-  max-height: 50px;
-  margin-bottom: 4px;
+
+.desc {
+  color: var(--notion-text-tertiary);
+  font-size: 0.85rem;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
-[data-theme='dark'] .item {
-  background: #232324;
-  color: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.32);
+
+.meta {
+  font-size: 0.82rem;
+  color: var(--notion-text-tertiary);
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
-[data-theme='dark'] .item:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.4);
-  border-color: #444;
-}
-[data-theme='dark'] .title {
-  color: #fff;
-}
-[data-theme='dark'] .desc {
-  color: #bdbdbd;
-}
-[data-theme='dark'] .meta {
-  color: #bdbdbd;
-} 

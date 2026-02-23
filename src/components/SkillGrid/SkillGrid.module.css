@@ -1,0 +1,17 @@
+.section {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--notion-text-secondary);
+  margin: 0 0 10px;
+  letter-spacing: 0.01em;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

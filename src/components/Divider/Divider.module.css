@@ -1,0 +1,8 @@
+.divider {
+  border: none;
+  height: 1px;
+  background: var(--notion-border);
+  margin: 32px 0;
+  width: 100%;
+  transition: background 0.3s ease;
+}

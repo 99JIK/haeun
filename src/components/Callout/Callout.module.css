@@ -1,11 +1,12 @@
 .callout {
   display: flex;
   align-items: flex-start;
-  background: #e7f3ff;
+  background: var(--notion-bg-tertiary);
   border-radius: 8px;
   padding: 16px 20px;
   margin-bottom: 18px;
   gap: 16px;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 
 .icon {
@@ -17,20 +18,10 @@
   font-weight: 600;
   font-size: 1.08rem;
   margin-bottom: 4px;
+  color: var(--notion-text);
 }
 
 .description {
-  color: #444;
+  color: var(--notion-text-secondary);
   font-size: 1rem;
 }
-
-[data-theme='dark'] .callout {
-  background: #232324;
-  color: #fff;
-}
-[data-theme='dark'] .title {
-  color: #fff;
-}
-[data-theme='dark'] .description {
-  color: #bdbdbd;
-} 

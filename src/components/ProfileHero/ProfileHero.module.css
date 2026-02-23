@@ -1,0 +1,90 @@
+.hero {
+  width: 100%;
+}
+
+.cover {
+  height: 200px;
+  width: 100%;
+  background: var(--notion-cover-gradient);
+  transition: background 0.5s ease;
+}
+
+.profileSection {
+  max-width: 900px;
+  margin: -48px auto 0;
+  padding: 0 24px;
+  position: relative;
+}
+
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 16px;
+  background: var(--notion-bg);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--notion-bg-secondary);
+  margin-bottom: 16px;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.avatarImage {
+  width: 80%;
+  height: 80%;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.emoji {
+  font-size: 56px;
+  line-height: 1;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--notion-text);
+  margin: 0 0 4px;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.subtitle {
+  font-size: 1.15rem;
+  color: var(--notion-text-secondary);
+  margin: 0 0 8px;
+  font-weight: 400;
+}
+
+.tagline {
+  font-size: 1rem;
+  color: var(--notion-text-tertiary);
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .cover {
+    height: 140px;
+  }
+
+  .profileSection {
+    margin-top: -36px;
+    padding: 0 16px;
+  }
+
+  .avatar {
+    width: 72px;
+    height: 72px;
+  }
+
+  .emoji {
+    font-size: 40px;
+  }
+
+  .name {
+    font-size: 1.8rem;
+  }
+}

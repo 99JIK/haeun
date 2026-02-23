@@ -1,4 +1,5 @@
 import React from 'react';
+import {useHistory} from '@docusaurus/router';
 import styles from './BoardView.module.css';
 
 interface BoardMeeting {
@@ -19,12 +20,18 @@ const STATUS_LABELS: Record<string, string> = {
   'In Progress': '진행 중',
   'Done': '완료',
 };
+const STATUS_COLORS: Record<string, string> = {
+  'To Do': '#eb5757',
+  'In Progress': '#f2994a',
+  'Done': '#27ae60',
+};
 
 export default function BoardView({ meetings }: BoardViewProps) {
-  // status별로 그룹핑
+  const history = useHistory();
   const columns = STATUS_ORDER.map(status => ({
     status,
     label: STATUS_LABELS[status] || status,
+    color: STATUS_COLORS[status] || '#999',
     cards: meetings.filter(m => m.status === status),
   }));
 
@@ -32,12 +39,16 @@ export default function BoardView({ meetings }: BoardViewProps) {
     <div className={styles.board}>
       {columns.map(col => (
         <div key={col.status} className={styles.column}>
-          <div className={styles.columnHeader}>{col.label}</div>
+          <div className={styles.columnHeader}>
+            <span className={styles.statusDot} style={{ background: col.color }} />
+            {col.label}
+            <span className={styles.statusCount}>{col.cards.length}</span>
+          </div>
           {col.cards.map(card => (
             <div
               key={card.id}
               className={styles.card}
-              onClick={() => card.pageUrl && (window.location.href = card.pageUrl)}
+              onClick={() => card.pageUrl && history.push(card.pageUrl)}
               tabIndex={0}
               role="button"
             >
@@ -49,4 +60,4 @@ export default function BoardView({ meetings }: BoardViewProps) {
       ))}
     </div>
   );
-} 
+}

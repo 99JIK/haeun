@@ -1,25 +1,17 @@
 .quote {
-  border-left: 4px solid #bdbdbd;
-  background: #f8f7f5;
+  border-left: 4px solid var(--notion-border-hover);
+  background: var(--notion-bg-tertiary);
   margin: 18px 0;
   padding: 14px 20px;
   border-radius: 8px;
   font-style: italic;
-  color: #555;
+  color: var(--notion-text-secondary);
+  transition: all 0.3s ease;
 }
 
 .author {
   font-weight: 500;
   font-size: 0.98rem;
   margin-top: 8px;
-  color: #888;
+  color: var(--notion-text-tertiary);
 }
-
-[data-theme='dark'] .quote {
-  background: #232324;
-  color: #bdbdbd;
-  border-left: 4px solid #444;
-}
-[data-theme='dark'] .author {
-  color: #888;
-} 

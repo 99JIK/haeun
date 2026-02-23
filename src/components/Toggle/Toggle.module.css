@@ -1,29 +1,24 @@
 .toggle {
-  background: #f3f2ef;
+  background: var(--notion-bg-tertiary);
   border-radius: 6px;
   padding: 12px 16px;
   margin-bottom: 12px;
   cursor: pointer;
-  transition: background 0.2s;
+  transition: background 0.2s ease, color 0.3s ease;
 }
+
 .toggle:hover {
-  background: #ecebe9;
+  filter: brightness(0.97);
 }
 
 .title {
   font-weight: 600;
   font-size: 1.05rem;
   user-select: none;
+  color: var(--notion-text);
 }
 
 .content {
   margin-top: 12px;
+  color: var(--notion-text);
 }
-
-[data-theme='dark'] .toggle {
-  background: #232324;
-  color: #fff;
-}
-[data-theme='dark'] .title {
-  color: #fff;
-} 

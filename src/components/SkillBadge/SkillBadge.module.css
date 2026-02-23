@@ -1,0 +1,41 @@
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 6px;
+  background: var(--badge-color, var(--notion-bg-tertiary));
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--notion-text);
+  transition: all 0.2s ease;
+  border: 1px solid var(--notion-border);
+  cursor: default;
+  user-select: none;
+}
+
+.badge:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--notion-card-shadow-hover);
+}
+
+.linked {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.linked:hover {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  border-color: var(--ifm-color-primary);
+  text-decoration: none;
+}
+
+.icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.label {
+  white-space: nowrap;
+}

@@ -1,66 +1,82 @@
 .board {
   display: flex;
-  gap: 24px;
-  margin: 32px 0;
+  gap: 12px;
+  margin: 16px 0;
   overflow-x: auto;
+  padding-bottom: 4px;
 }
+
+.board::-webkit-scrollbar {
+  height: 6px;
+}
+
+.board::-webkit-scrollbar-thumb {
+  background: var(--notion-border);
+  border-radius: 3px;
+}
+
 .column {
-  background: #faf9f6;
+  background: var(--notion-bg-tertiary);
   border-radius: 10px;
-  min-width: 260px;
-  max-width: 320px;
+  min-width: 240px;
+  max-width: 300px;
   flex: 1 1 0;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1px 3px rgba(55,53,47,0.04);
-  padding: 0 0 12px 0;
-}
-.columnHeader {
-  font-size: 1.08rem;
-  font-weight: 700;
-  padding: 16px 18px 10px 18px;
-  color: #37352f;
-}
-.card {
-  background: #fff;
-  border-radius: 8px;
-  margin: 0 12px 12px 12px;
-  padding: 14px 16px;
-  box-shadow: 0 1px 3px rgba(55,53,47,0.04);
-  cursor: pointer;
-  transition: box-shadow 0.2s;
-}
-.card:hover {
-  box-shadow: 0 4px 12px rgba(55,53,47,0.10);
-}
-.cardTitle {
-  font-weight: 600;
-  margin-bottom: 4px;
-  color: #37352f;
-}
-.cardDesc {
-  color: #787774;
-  font-size: 0.97rem;
+  padding: 0 0 8px 0;
+  transition: background 0.3s ease;
 }
 
-[data-theme='dark'] .board {
-  background: #191919;
+.columnHeader {
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 12px 16px 8px 16px;
+  color: var(--notion-text-secondary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
 }
-[data-theme='dark'] .column {
-  background: #232324;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.18);
+
+.statusDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
 }
-[data-theme='dark'] .columnHeader {
-  color: #fff;
+
+.statusCount {
+  font-size: 0.8rem;
+  color: var(--notion-text-tertiary);
+  font-weight: 400;
+  margin-left: auto;
 }
-[data-theme='dark'] .card {
-  background: #191919;
-  color: #fff;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.32);
+
+.card {
+  background: var(--notion-card-bg);
+  border-radius: 8px;
+  margin: 0 8px 6px 8px;
+  padding: 10px 14px;
+  box-shadow: var(--notion-card-shadow);
+  cursor: pointer;
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
 }
-[data-theme='dark'] .cardTitle {
-  color: #fff;
+
+.card:hover {
+  box-shadow: var(--notion-card-shadow-hover);
+  transform: translateY(-1px);
 }
-[data-theme='dark'] .cardDesc {
-  color: #bdbdbd;
-} 
+
+.cardTitle {
+  font-weight: 500;
+  font-size: 0.92rem;
+  margin-bottom: 4px;
+  color: var(--notion-text);
+}
+
+.cardDesc {
+  color: var(--notion-text-tertiary);
+  font-size: 0.85rem;
+  line-height: 1.4;
+}

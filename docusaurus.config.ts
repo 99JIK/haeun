@@ -1,33 +1,40 @@
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
+
 const config: Config = {
-  title: 'TITLE',
-  tagline: 'ALTRUISTICHIVE',
+  title: '이하은',
+  tagline: '컴퓨터공학과 정보보안을 공부하는 학생',
   favicon: 'img/favicon.svg',
-future: {
+  future: {
     v4: true,
   },
-  url: 'https://sub-domain.altruistic-hive.org',
+  url: 'https://izzru.github.io',
   baseUrl: '/',
 
-  organizationName: 'altruistic-hive',
-  projectName: '<proj>', 
+  organizationName: 'izzru',
+  projectName: 'haeun',
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   i18n: {
     defaultLocale: 'ko',
-    locales: ['ko','en'],
+    locales: ['ko', 'en'],
   },
+
+  stylesheets: [
+    'https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css',
+  ],
 
   presets: [
     [
       'classic',
       {
         docs: {
+          path: 'project',
           sidebarPath: './sidebars.ts',
+          routeBasePath: 'project',
         },
         blog: {
           showReadingTime: true,
@@ -48,10 +55,15 @@ future: {
 
   themeConfig: {
     image: 'img/favicon.svg',
+    colorMode: {
+      defaultMode: 'light',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
     navbar: {
-      title: 'TITLE',
+      title: '이하은',
       logo: {
-        alt: 'TITLE',
+        alt: '이하은 포트폴리오',
         src: 'img/favicon.svg',
       },
       items: [
@@ -59,60 +71,36 @@ future: {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Project',
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/altruistic-hive',
+          href: 'https://github.com/izzru',
           label: 'GitHub',
           position: 'right',
         },
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
-          title: 'Docs',
+          title: 'Navigate',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
+            {label: 'Home', to: '/'},
+            {label: 'Blog', to: '/blog'},
+            {label: 'Project', to: '/project/done/portfolio-website'},
           ],
         },
         {
-          title: 'Community',
+          title: 'Connect',
           items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/altruistic-hive',
-            },
+            {label: 'GitHub', href: 'https://github.com/izzru'},
+            {label: 'Email', href: 'mailto:haeun@example.com'},
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} TIL, Inc. Built with Docusaurus.`,
+      copyright: `Copyright \u00A9 ${new Date().getFullYear()} 이하은. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,

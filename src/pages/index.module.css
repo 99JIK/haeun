@@ -1,93 +1,58 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-body {
-  background: #f7f6f3;
-}
-[data-theme='dark'] body {
-  background: #191919;
-}
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
-}
-
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.notionContainer {
+.pageContent {
   max-width: 900px;
-  margin: 40px auto;
-  padding: 32px 24px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(15, 15, 15, 0.06);
+  margin: 0 auto;
+  padding: 40px 24px 80px;
 }
 
-.notionTitle {
-  font-size: 2.5rem;
+.section {
+  margin-bottom: 8px;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 24px;
+  color: var(--notion-text);
+  margin-bottom: 20px;
   letter-spacing: -0.01em;
 }
 
-.notionCard {
-  background: #faf9f6;
-  border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(55, 53, 47, 0.04);
-  padding: 20px 24px;
-  margin-bottom: 20px;
-}
-
-.notionToggle {
-  background: #f3f2ef;
-  border-radius: 6px;
-  padding: 12px 16px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.notionToggle:hover {
-  background: #ecebe9;
-}
-
-.notionList {
-  list-style: none;
-  padding-left: 0;
-}
-
-.notionListItem {
+.contactLinks {
   display: flex;
-  align-items: center;
-  margin-bottom: 10px;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-top: 16px;
 }
 
-[data-theme='dark'] .notionContainer {
-  background: #191919;
-  color: #fff;
+.contactLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: var(--notion-bg-tertiary);
+  color: var(--notion-text);
+  font-weight: 500;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: 1px solid var(--notion-border);
 }
-[data-theme='dark'] .notionCard {
-  background: #232324;
-  color: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.32);
+
+.contactLink:hover {
+  background: var(--ifm-color-primary);
+  color: #ffffff;
+  border-color: var(--ifm-color-primary);
+  transform: translateY(-2px);
+  box-shadow: var(--notion-card-shadow-hover);
+  text-decoration: none;
 }
-[data-theme='dark'] .notionTitle {
-  color: #fff;
-}
-[data-theme='dark'] .notionListItem {
-  color: #bdbdbd;
+
+@media (max-width: 768px) {
+  .pageContent {
+    padding: 24px 16px 60px;
+  }
+
+  .sectionTitle {
+    font-size: 1.3rem;
+  }
 }
